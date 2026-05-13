@@ -1,0 +1,108 @@
+import type { Question } from "@/types/assessment";
+
+export const questions: Question[] = [
+  {
+    id: "ai-usage",
+    dimension: "aiUsage",
+    prompt: "How often is AI part of your coding workflow?",
+    options: [
+      { value: 0, label: "Rarely or never" },
+      { value: 1, label: "Occasionally for explanations or examples" },
+      { value: 2, label: "Frequently for small tasks" },
+      { value: 3, label: "Daily as part of coding" },
+      { value: 4, label: "AI agents are part of my normal workflow" },
+      { value: 5, label: "AI systems can operate without my constant involvement" },
+    ],
+  },
+  {
+    id: "task-complexity",
+    dimension: "taskComplexity",
+    prompt: "What is the largest coding task you would delegate to AI?",
+    options: [
+      { value: 0, label: "Search or explain something" },
+      { value: 1, label: "Write a test, comment, docstring, or helper" },
+      { value: 2, label: "Implement a bounded feature with supervision" },
+      { value: 3, label: "Work on full tickets while I review" },
+      { value: 4, label: "Execute from a spec over many hours" },
+      { value: 5, label: "Produce software autonomously from specs" },
+    ],
+  },
+  {
+    id: "context-management",
+    dimension: "contextManagement",
+    prompt: "How do you usually give context to AI?",
+    options: [
+      { value: 0, label: "I ask vague questions without much context" },
+      { value: 1, label: "I paste small snippets" },
+      { value: 2, label: "I include relevant files or examples" },
+      { value: 3, label: "I provide goals, constraints, files, and expected behavior" },
+      { value: 4, label: "I provide specs, acceptance criteria, and test expectations" },
+      { value: 5, label: "My workflow automatically provides the right context to agents" },
+    ],
+  },
+  {
+    id: "verification",
+    dimension: "verification",
+    prompt: "How do you check AI-generated work?",
+    options: [
+      { value: 0, label: "I mostly trust it" },
+      { value: 1, label: "I skim the output" },
+      { value: 2, label: "I review the code and run it manually" },
+      { value: 3, label: "I review diffs and run tests/type checks" },
+      { value: 4, label: "I use CI, regression tests, and structured review" },
+      { value: 5, label: "I have strong automated evals, monitoring, and rollback" },
+    ],
+  },
+  {
+    id: "decomposition",
+    dimension: "decomposition",
+    prompt: "How do you turn a vague goal into AI-executable work?",
+    options: [
+      { value: 0, label: "I usually ask the AI to figure it all out" },
+      { value: 1, label: "I give a broad request" },
+      { value: 2, label: "I break it into a few steps" },
+      { value: 3, label: "I define scoped tasks with clear outcomes" },
+      { value: 4, label: "I write detailed specs and acceptance criteria" },
+      { value: 5, label: "I maintain reusable task patterns, specs, or workflows" },
+    ],
+  },
+  {
+    id: "technical-depth",
+    dimension: "technicalDepth",
+    prompt: "If AI-generated code breaks, what can you do?",
+    options: [
+      { value: 0, label: "I am usually stuck" },
+      { value: 1, label: "I can ask AI to try again" },
+      { value: 2, label: "I can make small fixes" },
+      { value: 3, label: "I can debug most issues in familiar code" },
+      { value: 4, label: "I can reason about architecture, edge cases, and maintainability" },
+      { value: 5, label: "I can design systems, review deeply, and catch subtle failures" },
+    ],
+  },
+  {
+    id: "workflow-sophistication",
+    dimension: "workflowSophistication",
+    prompt: "Which best describes your AI coding workflow?",
+    options: [
+      { value: 0, label: "No real workflow" },
+      { value: 1, label: "Occasional chat" },
+      { value: 2, label: "AI inside my editor" },
+      { value: 3, label: "Agent works on scoped tasks" },
+      { value: 4, label: "Repeatable spec → implementation → test loop" },
+      { value: 5, label: "Autonomous software production pipeline" },
+    ],
+  },
+  {
+    id: "ambition",
+    dimension: "ambition",
+    prompt: "Where do you want to go with AI-assisted coding?",
+    options: [
+      { value: 0, label: "I am just curious" },
+      { value: 1, label: "I want help with small coding tasks" },
+      { value: 2, label: "I want to code faster with AI as a partner" },
+      { value: 3, label: "I want to manage agents that implement work for me" },
+      { value: 4, label: "I want to design workflows where agents execute from specs" },
+      { value: 5, label: "I want to build or operate autonomous software systems" },
+    ],
+  },
+];
